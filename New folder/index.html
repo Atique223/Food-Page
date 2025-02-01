@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodRush - Food Delivery & Takeout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-overlay {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center justify-between w-full md:w-auto">
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="FoodRush Logo" class="h-12 w-12 md:h-16 md:w-16 mr-4 rounded-full object-cover">
+                    <h1 class="text-xl md:text-2xl font-bold text-red-600">FoodRush</h1>
+                </div>
+                <button id="mobile-menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <nav id="mobile-menu" class="hidden md:block w-full md:w-auto">
+                <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center md:text-left">
+                    <li><a href="index.html" class="text-gray-800 hover:text-red-600">Home</a></li>
+                    <li><a href="restaurants.html" class="text-gray-800 hover:text-red-600">Restaurants</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-red-600">Offers</a></li>
+                    <li><a href="contact.html" class="text-gray-800 hover:text-red-600">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="mobile-auth" class="hidden md:flex items-center space-x-4 w-full md:w-auto justify-center md:justify-start mt-4 md:mt-0">
+                <a href="login.html" class="text-gray-800 hover:text-red-600">Log In</a>
+                <a href="signup.html" class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileAuth = document.getElementById('mobile-auth');
+            mobileMenu.classList.toggle('hidden');
+            mobileAuth.classList.toggle('hidden');
+        });
+    </script>
+
+    <main class="pt-24">
+        <section class="hero-overlay text-white text-center py-24">
+            <div class="container mx-auto px-4">
+                <h2 class="text-5xl font-bold mb-6 drop-shadow-lg">Delicious Food, Delivered</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto drop-shadow-md">Order from the best local restaurants with easy, on-demand delivery</p>
+                <div class="max-w-xl mx-auto bg-white rounded-full p-2 flex items-center shadow-lg">
+                    <input type="text" placeholder="Enter your delivery address" class="flex-grow px-4 py-3 rounded-l-full text-gray-800 focus:outline-none">
+                    <button class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition">
+                        Find Food
+                    </button>
+                </div>
+                <div class="mt-8 flex justify-center space-x-4">
+                    <div class="bg-white/20 px-4 py-2 rounded-full flex items-center">
+                        <i class="fas fa-truck mr-2"></i>
+                        <span>Free Delivery</span>
+                    </div>
+                    <div class="bg-white/20 px-4 py-2 rounded-full flex items-center">
+                        <i class="fas fa-tags mr-2"></i>
+                        <span>Best Offers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold text-center mb-12">How It Works</h3>
+                <div class="grid grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="bg-red-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-map-marker-alt text-4xl text-red-600"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-4">Choose Location</h4>
+                        <p class="text-gray-600">Select your delivery address</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-green-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-utensils text-4xl text-green-600"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-4">Choose Restaurant</h4>
+                        <p class="text-gray-600">Browse local restaurants</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-blue-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-box text-4xl text-blue-600"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-4">Receive Order</h4>
+                        <p class="text-gray-600">Enjoy your delicious meal</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Pizza Section -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://tb-static.uber.com/prod/image-proc/processed_images/c70bb68937bbb31a9330afd02e4ce5d3/c9252e6c6cd289c588c3381bc77b1dfc.jpeg" 
+                             alt="Gourmet Pizza" 
+                             class="w-full h-96 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-3xl font-bold text-gray-800 mb-4">Artisan Pizza Co.</h3>
+                            <p class="text-gray-600 text-lg mb-6">Discover a world of flavor with our artisan pizzas. Crafted with passion, using the finest ingredients and innovative recipes that transform every bite into a culinary adventure.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center text-yellow-500">
+                                    <i class="fas fa-star mr-2"></i>
+                                    <span class="text-xl font-semibold">4.6</span>
+                                </div>
+                                <a href="pizza-detail.html" class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition">
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Burger Section -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="data:image/jpeg;base64,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" 
+                             alt="Gourmet Burger" 
+                             class="w-full h-96 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-3xl font-bold text-gray-800 mb-4">Urban Burger Kitchen</h3>
+                            <p class="text-gray-600 text-lg mb-6">Experience burger perfection with our signature creations. Each burger is a masterpiece, featuring premium meats, innovative toppings, and a commitment to exceptional flavor.</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center text-yellow-500">
+                                    <i class="fas fa-star mr-2"></i>
+                                    <span class="text-xl font-semibold">4.4</span>
+                                </div>
+                                <a href="burger-detail.html" class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition">
+                                    Order Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold text-center mb-12">Popular Restaurants</h3>
+                <div class="grid grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pizza Restaurant" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Slice of Heaven Pizzeria</h3>
+                            <p class="text-gray-600 text-sm mb-2">Classic Italian pizzas, wood-fired and handmade</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center text-gray-500 text-sm">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    <span>Downtown, 2.3 km</span>
+                                </div>
+                                <div class="flex items-center text-yellow-500">
+                                    <i class="fas fa-star mr-1"></i>
+                                    <span>4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Burger Restaurant" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Burger Bliss</h3>
+                            <p class="text-gray-600 text-sm mb-2">Gourmet burgers with locally sourced ingredients</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center text-gray-500 text-sm">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    <span>Midtown, 1.7 km</span>
+                                </div>
+                                <div class="flex items-center text-yellow-500">
+                                    <i class="fas fa-star mr-1"></i>
+                                    <span>4.3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salad Restaurant" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Green Leaf Salads</h3>
+                            <p class="text-gray-600 text-sm mb-2">Fresh, organic salads and healthy bowls</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center text-gray-500 text-sm">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    <span>Uptown, 3.1 km</span>
+                                </div>
+                                <div class="flex items-center text-yellow-500">
+                                    <i class="fas fa-star mr-1"></i>
+                                    <span>4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Seafood Restaurant" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">Ocean's Catch</h3>
+                            <p class="text-gray-600 text-sm mb-2">Fresh seafood and coastal cuisine</p>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center text-gray-500 text-sm">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>
+                                    <span>Harbor District, 4.2 km</span>
+                                </div>
+                                <div class="flex items-center text-yellow-500">
+                                    <i class="fas fa-star mr-1"></i>
+                                    <span>4.6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="restaurants.html" class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition inline-block">
+                        View All Restaurants
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6">Download the FoodRush App</h3>
+                        <p class="text-gray-600 mb-8">Get the best food delivery experience with our mobile app. Order from your favorite restaurants with just a few taps.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-black text-white px-6 py-3 rounded-lg flex items-center">
+                                <i class="fab fa-apple mr-3 text-2xl"></i>
+                                <span>App Store</span>
+                            </a>
+                            <a href="#" class="bg-black text-white px-6 py-3 rounded-lg flex items-center">
+                                <i class="fab fa-google-play mr-3 text-2xl"></i>
+                                <span>Google Play</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-4 grid grid-cols-4 gap-8">
+            <div>
+                <h5 class="font-bold mb-4">FoodRush</h5>
+                <p class="text-gray-400">Delivering delicious meals from local restaurants to your doorstep.</p>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Quick Links</h5>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                    <li><a href="restaurants.html" class="text-gray-400 hover:text-white">Restaurants</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Offers</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Support</h5>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Contact Us</h5>
+                <p class="text-gray-400 mb-2">support@foodrush.com</p>
+                <p class="text-gray-400">+1 (555) 123-4567</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-8 pt-6 border-t border-gray-800 text-center">
+            <p class="text-gray-500">&copy; 2024 FoodRush. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Login to FoodRush</h2>
+                <button id="closeLoginModal" class="text-gray-600 hover:text-gray-900">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="space-y-4">
+                <input type="email" id="emailInput" placeholder="Email" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600">
+                <input type="password" id="passwordInput" placeholder="Password" class="w-full p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600">
+                <button id="loginButton" class="w-full flex items-center justify-center bg-red-500 text-white py-3 rounded-lg hover:bg-red-600 transition">
+                    Login
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function handleGoogleSignIn(response) {
+            const credential = response.credential;
+            const payload = parseJwt(credential);
+            
+            // Extract user information
+            const googleUser = {
+                email: payload.email,
+                name: payload.name,
+                picture: payload.picture
+            };
+
+            // Use AuthManager to handle Google Sign-In
+            const result = window.authManager.googleSignIn(googleUser);
+
+            if (result.success) {
+                // Update UI
+                document.getElementById('authModal').classList.add('hidden');
+                updateUserInterface(result.user);
+                
+                // Show welcome message
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Welcome!',
+                    text: `Logged in as ${result.user.name}`,
+                    showConfirmButton: false,
+                    timer: 2000
+                });
+            }
+        }
+
+        function parseJwt(token) {
+            const base64Url = token.split('.')[1];
+            const base64 = base64Url.replace('-', '+').replace('_', '/');
+            return JSON.parse(window.atob(base64));
+        }
+
+        function updateUserInterface(user) {
+            // Update navigation to show logged-in state
+            const loginButtons = document.querySelectorAll('#loginBtn, #signupBtn');
+            const userProfileArea = document.createElement('div');
+            userProfileArea.innerHTML = `
+                <div class="flex items-center space-x-2">
+                    <img src="${user.profilePicture || 'default-avatar.png'}" 
+                         class="w-8 h-8 rounded-full" alt="Profile">
+                    <span class="text-gray-800">${user.name}</span>
+                </div>
+            `;
+            
+            // Replace login buttons with user profile
+            loginButtons.forEach(btn => btn.style.display = 'none');
+            document.querySelector('.flex.items-center.space-x-4').appendChild(userProfileArea);
+        }
+
+        window.onload = function() {
+            google.accounts.id.initialize({
+                client_id: '1034987654321-abcdefghijklmnopqrstuvwxyz.apps.googleusercontent.com', 
+                callback: handleGoogleSignIn
+            });
+
+            google.accounts.id.renderButton(
+                document.getElementById('googleSignInButton'),
+                { 
+                    theme: 'outline', 
+                    size: 'large',
+                    type: 'standard',
+                    text: 'signin_with',
+                    shape: 'rectangular',
+                    logo_alignment: 'left'
+                }
+            );
+
+            // Login button handler
+            document.getElementById('loginButton').addEventListener('click', function() {
+                const email = document.getElementById('emailInput').value;
+                const password = document.getElementById('passwordInput').value;
+
+                const result = window.authManager.login(email, password);
+
+                if (result.success) {
+                    document.getElementById('authModal').classList.add('hidden');
+                    updateUserInterface(result.user);
+                    
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Login Successful!',
+                        text: `Welcome back, ${result.user.name}`,
+                        showConfirmButton: false,
+                        timer: 2000
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Login Failed',
+                        text: result.message,
+                        confirmButtonText: 'Try Again'
+                    });
+                }
+            });
+        }
+    </script>
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function() {
+            document.getElementById('loginModal').classList.remove('hidden');
+        });
+
+        document.getElementById('closeLoginModal').addEventListener('click', function() {
+            document.getElementById('loginModal').classList.add('hidden');
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('loginBtn');
+            const loginModal = document.getElementById('loginModal');
+            const closeModalBtn = document.getElementById('closeLoginModal');
+            const submitLoginBtn = document.getElementById('loginButton');
+
+            // Open login modal
+            loginBtn.addEventListener('click', function() {
+                loginModal.classList.remove('hidden');
+            });
+
+            // Close login modal
+            closeModalBtn.addEventListener('click', function() {
+                loginModal.classList.add('hidden');
+            });
+
+            // Login logic
+            submitLoginBtn.addEventListener('click', function() {
+                const email = document.getElementById('emailInput').value;
+                const password = document.getElementById('passwordInput').value;
+
+                if (email === 'user@foodrush.com' && password === 'password123') {
+                    // Successful login
+                    loginModal.classList.add('hidden');
+                    
+                    // Hide login buttons
+                    document.getElementById('loginBtn').style.display = 'none';
+                    document.querySelector('#signupBtn').style.display = 'none';
+
+                    // Create user profile
+                    const profileDiv = document.createElement('div');
+                    profileDiv.innerHTML = `
+                        <div class="flex items-center space-x-2">
+                            <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 class="w-8 h-8 rounded-full" alt="Profile">
+                            <span class="text-gray-800">John Doe</span>
+                        </div>
+                    `;
+                    
+                    // Add profile to navigation
+                    document.querySelector('.flex.items-center.space-x-4').appendChild(profileDiv);
+
+                    alert('Login Successful!');
+                } else {
+                    alert('Invalid email or password. Try: user@foodrush.com / password123');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Pizza - FoodRush</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="FoodRush Logo" class="h-16 w-16 mr-4 rounded-full object-cover">
+                <h1 class="text-2xl font-bold text-red-600">FoodRush</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="/" class="text-gray-800 hover:text-red-600">Home</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-red-600">Restaurants</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-red-600">Offers</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-red-600">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                     alt="Margherita Pizza" 
+                     class="w-full h-[500px] object-cover rounded-lg shadow-lg">
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Margherita Pizza</h2>
+                <div class="flex items-center mb-4">
+                    <div class="flex text-yellow-500 mr-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-gray-600">(4.5 Reviews)</span>
+                </div>
+                <div class="mb-6">
+                    <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full mr-2">Italian Cuisine</span>
+                    <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Vegetarian</span>
+                </div>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    A classic Margherita pizza that celebrates the colors of the Italian flag: red (tomato), white (mozzarella), and green (basil). 
+                    Made with fresh, high-quality ingredients, our Margherita pizza features a thin, crispy crust topped with San Marzano tomato sauce, 
+                    fresh buffalo mozzarella, and hand-picked basil leaves.
+                </p>
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Ingredients</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>San Marzano Tomato Sauce</li>
+                        <li>Fresh Buffalo Mozzarella</li>
+                        <li>Fresh Basil Leaves</li>
+                        <li>Extra Virgin Olive Oil</li>
+                        <li>Sea Salt</li>
+                    </ul>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <span class="text-3xl font-bold text-red-600 mr-6">$12.99</span>
+                        <button class="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="burger-detail.html" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-full hover:bg-gray-300 transition flex items-center">
+                            <i class="fas fa-arrow-left mr-2"></i> Previous
+                        </a>
+                        <a href="salad-detail.html" class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition flex items-center">
+                            Next <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-4 gap-8">
+            <div>
+                <h5 class="font-bold mb-4">FoodRush</h5>
+                <p class="text-gray-400">Delivering happiness, one meal at a time.</p>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Quick Links</h5>
+                <ul>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Restaurants</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Offers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Contact</h5>
+                <p class="text-gray-400">support@foodrush.com</p>
+                <p class="text-gray-400">+1 (555) 123-4567</p>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Follow Us</h5>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

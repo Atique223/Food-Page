@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodRush - Restaurants</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center justify-between w-full md:w-auto">
+                <div class="flex items-center">
+                    <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="FoodRush Logo" class="h-12 w-12 md:h-16 md:w-16 mr-4 rounded-full object-cover">
+                    <h1 class="text-xl md:text-2xl font-bold text-red-600">FoodRush</h1>
+                </div>
+                <button id="mobile-menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <nav id="mobile-menu" class="hidden md:block w-full md:w-auto">
+                <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-center md:text-left">
+                    <li><a href="index.html" class="text-gray-800 hover:text-red-600">Home</a></li>
+                    <li><a href="restaurants.html" class="text-gray-800 hover:text-red-600 font-bold">Restaurants</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-red-600">Offers</a></li>
+                    <li><a href="contact.html" class="text-gray-800 hover:text-red-600">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="mobile-auth" class="hidden md:flex items-center space-x-4 w-full md:w-auto justify-center md:justify-start mt-4 md:mt-0">
+                <a href="login.html" class="text-gray-800 hover:text-red-600">Log In</a>
+                <a href="signup.html" class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileAuth = document.getElementById('mobile-auth');
+            mobileMenu.classList.toggle('hidden');
+            mobileAuth.classList.toggle('hidden');
+        });
+    </script>
+
+    <main class="container mx-auto px-4 py-12">
+        <h2 class="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-800">Our Restaurants</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Pizza Restaurant -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <a href="pizza-detail.html" class="block">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pizza Restaurant" class="w-full h-48 md:h-64 object-cover">
+                </a>
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800">Slice of Heaven Pizzeria</h3>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star mr-1 md:mr-2"></i>
+                            <span class="text-sm md:text-base">4.5</span>
+                            <span class="ml-2 bg-green-100 text-green-600 px-2 rounded-full text-xs">Open</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs md:text-sm">Classic Italian pizzas, wood-fired and handmade</p>
+                    <div class="mt-2 flex items-center text-gray-500 text-xs md:text-sm">
+                        <i class="fas fa-map-marker-alt mr-1 md:mr-2"></i>
+                        <span>Downtown, 2.3 km</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Burger Restaurant -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <a href="burger-detail.html" class="block">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Burger Restaurant" class="w-full h-48 md:h-64 object-cover">
+                </a>
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800">Burger Bliss</h3>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star mr-1 md:mr-2"></i>
+                            <span class="text-sm md:text-base">4.3</span>
+                            <span class="ml-2 bg-green-100 text-green-600 px-2 rounded-full text-xs">Open</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs md:text-sm">Gourmet burgers with locally sourced ingredients</p>
+                    <div class="mt-2 flex items-center text-gray-500 text-xs md:text-sm">
+                        <i class="fas fa-map-marker-alt mr-1 md:mr-2"></i>
+                        <span>Midtown, 1.7 km</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Salad Restaurant -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <a href="salad-detail.html" class="block">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salad Restaurant" class="w-full h-48 md:h-64 object-cover">
+                </a>
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800">Green Leaf Salads</h3>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star mr-1 md:mr-2"></i>
+                            <span class="text-sm md:text-base">4.7</span>
+                            <span class="ml-2 bg-green-100 text-green-600 px-2 rounded-full text-xs">Open</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs md:text-sm">Fresh, organic salads and healthy bowls</p>
+                    <div class="mt-2 flex items-center text-gray-500 text-xs md:text-sm">
+                        <i class="fas fa-map-marker-alt mr-1 md:mr-2"></i>
+                        <span>Uptown, 3.1 km</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seafood Restaurant -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <a href="seafood-detail.html" class="block">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Seafood Restaurant" class="w-full h-48 md:h-64 object-cover">
+                </a>
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800">Ocean's Catch</h3>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star mr-1 md:mr-2"></i>
+                            <span class="text-sm md:text-base">4.6</span>
+                            <span class="ml-2 bg-green-100 text-green-600 px-2 rounded-full text-xs">Open</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs md:text-sm">Fresh seafood and coastal cuisine</p>
+                    <div class="mt-2 flex items-center text-gray-500 text-xs md:text-sm">
+                        <i class="fas fa-map-marker-alt mr-1 md:mr-2"></i>
+                        <span>Harbor District, 4.2 km</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mexican Restaurant -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <a href="mexican-detail.html" class="block">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mexican Restaurant" class="w-full h-48 md:h-64 object-cover">
+                </a>
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800">Taco Fiesta</h3>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star mr-1 md:mr-2"></i>
+                            <span class="text-sm md:text-base">4.6</span>
+                            <span class="ml-2 bg-green-100 text-green-600 px-2 rounded-full text-xs">Open</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs md:text-sm">Authentic Mexican street food and tacos</p>
+                    <div class="mt-2 flex items-center text-gray-500 text-xs md:text-sm">
+                        <i class="fas fa-map-marker-alt mr-1 md:mr-2"></i>
+                        <span>Westside, 2.9 km</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sushi Restaurant -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <a href="sushi-detail.html" class="block">
+                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sushi Restaurant" class="w-full h-48 md:h-64 object-cover">
+                </a>
+                <div class="p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-800">Zen Sushi Bar</h3>
+                        <div class="flex items-center text-yellow-500">
+                            <i class="fas fa-star mr-1 md:mr-2"></i>
+                            <span class="text-sm md:text-base">4.7</span>
+                            <span class="ml-2 bg-green-100 text-green-600 px-2 rounded-full text-xs">Open</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs md:text-sm">Premium sushi and Japanese cuisine</p>
+                    <div class="mt-2 flex items-center text-gray-500 text-xs md:text-sm">
+                        <i class="fas fa-map-marker-alt mr-1 md:mr-2"></i>
+                        <span>Downtown, 3.5 km</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="authModal" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center">
+        <div class="bg-white rounded-lg shadow-lg p-8 w-1/2">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Login</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="emailInput" class="text-gray-800">Email:</label>
+                    <input type="email" id="emailInput" class="w-full p-2 border border-gray-400 rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <label for="passwordInput" class="text-gray-800">Password:</label>
+                    <input type="password" id="passwordInput" class="w-full p-2 border border-gray-400 rounded-lg">
+                </div>
+                <button id="loginButton" class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition font-semibold">Login</button>
+            </form>
+            <button id="closeAuthModal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 grid grid-cols-4 gap-8">
+            <div>
+                <h5 class="font-bold mb-4">FoodRush</h5>
+                <p class="text-gray-400">Delivering happiness, one meal at a time.</p>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Quick Links</h5>
+                <ul>
+                    <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                    <li><a href="restaurants.html" class="text-gray-400 hover:text-white">Restaurants</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Offers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Contact</h5>
+                <p class="text-gray-400">support@foodrush.com</p>
+                <p class="text-gray-400">+1 (555) 123-4567</p>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4">Follow Us</h5>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('loginBtn');
+            const loginModal = document.getElementById('authModal');
+            const closeModalBtn = document.getElementById('closeAuthModal');
+            const submitLoginBtn = document.getElementById('loginButton');
+
+            // Open login modal
+            loginBtn.addEventListener('click', function() {
+                loginModal.classList.remove('hidden');
+            });
+
+            // Close login modal
+            closeModalBtn.addEventListener('click', function() {
+                loginModal.classList.add('hidden');
+            });
+
+            // Login logic
+            submitLoginBtn.addEventListener('click', function() {
+                const email = document.getElementById('emailInput').value;
+                const password = document.getElementById('passwordInput').value;
+
+                if (email === 'user@foodrush.com' && password === 'password123') {
+                    // Successful login
+                    loginModal.classList.add('hidden');
+                    
+                    // Hide login buttons
+                    document.getElementById('loginBtn').style.display = 'none';
+                    document.querySelector('#signupBtn').style.display = 'none';
+
+                    // Create user profile
+                    const profileDiv = document.createElement('div');
+                    profileDiv.innerHTML = `
+                        <div class="flex items-center space-x-2">
+                            <img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 class="w-8 h-8 rounded-full" alt="Profile">
+                            <span class="text-gray-800">John Doe</span>
+                        </div>
+                    `;
+                    
+                    // Add profile to navigation
+                    document.querySelector('.flex.items-center.space-x-4').appendChild(profileDiv);
+
+                    alert('Login Successful!');
+                } else {
+                    alert('Invalid email or password. Try: user@foodrush.com / password123');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
